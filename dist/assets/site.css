@@ -59,6 +59,40 @@
   .product-icon { width: 39px; height: 39px; border-radius: 10px; display: grid; place-items: center; font-size: 23px; font-weight: 720; letter-spacing: -3px; padding-right: 3px; }
   .product-icon { flex: 0 0 auto; }
   .icon-build { background: #172a25; color: var(--lime); }
+  .icon-cto { background: #172a25; color: #c4f565; letter-spacing: -1px; padding-right: 0; }
+  .coding-workflow { padding: 34px; background: #dce5d1; background-image: radial-gradient(#83977744 .8px, transparent .8px); background-size: 16px 16px; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+  .workflow-heading { display: flex; align-items: center; gap: 12px; padding: 18px 20px; background: var(--ink); color: #f4f8ef; border-radius: 7px 7px 0 0; margin-top: 14px; font-size: 17px; font-weight: 600; }
+  .workflow-heading .product-icon { width: 28px; height: 28px; font-size: 24px; }
+  .workflow-team { margin-left: auto; font: 9px var(--mono); letter-spacing: .08em; color: #c5d3bd; }
+  .workflow-steps { background: #f8faf3; border: 1px solid #c5d0b7; border-top: 0; border-radius: 0 0 7px 7px; padding: 8px 20px; }
+  .workflow-step { position: relative; display: flex; gap: 14px; align-items: center; padding: 22px 0; }
+  .workflow-step + .workflow-step { border-top: 1px solid #e1e6d8; }
+  .step-number { flex: 0 0 30px; width: 30px; height: 30px; display: grid; place-items: center; background: #e9efdd; border-radius: 50%; font: 11px var(--mono); color: #50613e; }
+  .workflow-step strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+  .workflow-step div > span { display: block; font-size: 11px; color: #5d6b54; line-height: 1.6; }
+  .step-connector { position: absolute; bottom: -8px; left: 10px; color: #94a87e; z-index: 1; font-size: 12px; background: #f8faf3; }
+  .workflow-footnote { font: 10px/1.6 var(--mono); color: #586a4c; text-align: center; padding-top: 18px; }
+  .supporting-heading { margin-top: 48px; }
+  .supporting-heading h2 { font-size: 30px; font-weight: 550; letter-spacing: -1px; }
+  .supporting-heading p { color: var(--muted); font-size: 14px; line-height: 1.7; margin-top: 10px; }
+  .product-pair.supporting-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .supporting-grid .card-copy { padding: 24px; }
+  .supporting-grid .product-top { flex-wrap: wrap; gap: 8px; }
+  .supporting-grid .badge { margin-left: 0; }
+  .card-copy h3 { font-size: 25px; font-weight: 550; letter-spacing: -.8px; line-height: 1.25; margin-top: 23px; }
+  .supporting-grid .card-bottom { flex-direction: column; align-items: flex-start; }
+  .supporting-grid .preview { padding-inline: 18px; }
+  .supporting-grid .cleaner-body { grid-template-columns: 80px minmax(0, 1fr); }
+  .supporting-grid .cleaner-sidebar { padding-inline: 5px; }
+  .supporting-grid .cleaner-files { padding-inline: 10px; }
+  .supporting-grid .file-row { font-size: 8px; gap: 5px; }
+  .supporting-grid .file-row span { display: none; }
+  .product-card .architecture { height: 245px; margin-top: auto; padding: 22px 18px; gap: 10px; }
+  .product-card .architecture > .terminal, .product-card .architecture > .diagram-connect { display: none; }
+  .product-card .mini-app { padding: 12px 9px; }
+  .product-card .mini-title { font-size: 11px; }
+  .product-card .mini-tags { display: none; }
+  .product-card .api-strip { font-size: 8px; padding-inline: 10px; }
   .icon-keep { background: #e4eea9; color: #465325; }
   .icon-base { background: #d9e4fb; color: #3e5087; }
   .product-name { font-size: 19px; font-weight: 650; letter-spacing: -.4px; }
@@ -181,6 +215,10 @@
 @layer responsive {
   @media (min-width: 1600px) { .hero h1 { font-size: 108px; } }
   @media (max-width: 1050px) {
+    .product-pair.supporting-grid { grid-template-columns: 1fr; }
+    .supporting-grid .product-card { display: grid; grid-template-columns: 1fr 1fr; }
+    .supporting-grid .preview, .product-card .architecture { height: 100%; min-height: 245px; }
+    .supporting-grid .card-bottom { flex-direction: row; flex-wrap: wrap; align-items: center; }
     .shell { width: calc(100% - 64px); }
     .hero h1 { font-size: 76px; }
     .hero-main { grid-template-columns: 1.3fr 1fr; gap: 25px; }
@@ -198,6 +236,14 @@
     .principle-grid { gap: 30px; }
   }
   @media (max-width: 760px) {
+    .supporting-grid .product-card { display: flex; }
+    .supporting-grid .preview, .product-card .architecture { height: 245px; }
+    .coding-workflow { padding: 26px; }
+    .workflow-heading { padding: 15px; }
+    .workflow-team { font-size: 8px; }
+    .workflow-steps { padding-inline: 15px; }
+    .supporting-heading { margin-top: 35px; }
+    .supporting-heading h2 { font-size: 27px; }
     .shell { width: calc(100% - 40px); }
     .header-inner { height: 72px; }
     .wordmark { font-size: 23px; }
@@ -254,6 +300,9 @@
     *, *::before, *::after { animation: none !important; transition: none !important; }
   }
   @media (max-width: 380px) {
+    .coding-workflow { padding: 20px 16px; }
+    .workflow-team { display: none; }
+    .workflow-step { gap: 10px; }
     .hero h1 { font-size: 52px; }
     .product-top, .card-bottom { flex-wrap: wrap; }
     .product-top .badge { margin-left: 0; }

@@ -4,6 +4,7 @@ Checked on 2026-10-25 using authenticated GitHub metadata, README files, and pub
 
 | Product | Evidence | Claims used |
 | --- | --- | --- |
+| CodingCTO | README, repository visibility, and empty public release list checked via owner access | Codex account and pool assignments; management console; member sign-in and device binding; local client launches separately installed official Codex App; private source; release validation pending |
 | FastBuild | https://github.com/fastagi/fastbuild ; root README, LICENSE, CONTEXT.md | Public MIT starter kit; Go API, Next.js Web, Vite Admin; independent HTTP surfaces; default and optional starters |
 | KeepBuild | README in the owner-accessible source repository; https://github.com/fastagi/keepbuild-releases/releases/tag/v0.2.0 | macOS 14+; project cache review; Trash cleanup; history and verified restore; port inspection; public DMG/ZIP release; private source |
 | FastBase | README and metadata in the owner-accessible source repository | Tauri 2, React, Rust; PostgreSQL/MySQL/SQLite; connections; schema browser; data previews; multi-statement editor; first 1,000 rows per result set; private source |

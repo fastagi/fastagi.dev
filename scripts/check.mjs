@@ -27,9 +27,9 @@ for (const file of htmlFiles) {
     } catch { errors.push(`${file}: missing local target ${value}`); }
   }
   // Public marketing must not link visitors to private source repositories.
-  if (/href="https:\/\/github.com\/fastagi\/(keepbuild|fastbase)(?:["/#])/.test(html)) errors.push(`${file}: private source link`);
+  if (/href="https:\/\/github.com\/fastagi\/(codingcto|keepbuild|fastbase)(?:["/#])/.test(html)) errors.push(`${file}: private source link`);
 }
 await access(resolve(root, 'assets/social.png')).catch(() => errors.push('Missing PNG social image'));
-if (htmlFiles.length !== 9) errors.push(`Expected 8 localized pages and a 404; found ${htmlFiles.length}`);
+if (htmlFiles.length !== 11) errors.push(`Expected 10 localized pages and a 404; found ${htmlFiles.length}`);
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log(`Checked ${htmlFiles.length} HTML pages: metadata, headings, local links, anchors, assets, and public source boundaries.`);

@@ -1,6 +1,6 @@
 # fastagi.dev
 
-The independent FastAGI product website. Features **FastBuild**, **KeepBuild**, and **FastBase**, with English and Chinese pages.
+The independent FastAGI product website, for **independent developers and small teams**. Leads with **CodingCTO** for team Codex access, followed by **FastBuild**, **KeepBuild**, and **FastBase**, with English and Chinese pages.
 
 ## Development
 
@@ -25,6 +25,7 @@ Open `http://127.0.0.1:4317`. Set `PORT` to use another local port.
 | English | Chinese |
 | --- | --- |
 | `/` | `/zh/` |
+| `/codingcto/` | `/zh/codingcto/` |
 | `/fastbuild/` | `/zh/fastbuild/` |
 | `/keepbuild/` | `/zh/keepbuild/` |
 | `/fastbase/` | `/zh/fastbase/` |
@@ -33,6 +34,7 @@ Open `http://127.0.0.1:4317`. Set `PORT` to use another local port.
 
 Product copy was checked against repository metadata and README files on 2026-10-25. This is a content review, not an end-to-end verification of the applications themselves.
 
+- **CodingCTO:** featured product for team Codex account assignments, member-client sign-in, and launching a separately installed official Codex App. Source currently private; no public release or signup is advertised. Core workflows are documented as implemented, with release validation pending. This is not described as an autonomous CTO or an official OpenAI product.
 - **FastBuild:** public source, MIT license. Described as a full-stack starter kit, not a finished SaaS product.
 - **KeepBuild:** public v0.2.0 release packages; source is currently private. Download buttons lead to release notes and assets, not an unverified direct installer. Cleanup moves confirmed items to the Trash and does not promise immediate space recovery.
 - **FastBase:** current MVP in a private repository. No public license or download is advertised. PostgreSQL, MySQL, and SQLite are its own client capabilities, independent of FastBuild's backend constraints.
